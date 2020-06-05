@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Nunito', sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   max-height: 100vh;
+   margin: 0;
+   background-color: #666;
+}
+
+h1 {
+   color: #FFF;
+}
+
+.screen {
+   cursor: pointer;
+   width: 70%;
+   background-color: #000 !important;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+}
+
+.controls {
+   background-color: #333;
+   color: #FFF;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   width: 70%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px;
+}
+
+.controls .btn{
+   border: 0;
+   background: transparent;
+   cursor: pointer;
+}
+
+.controls .btn i{
+   font-size: 20px;
+}
+
+.controls .timestamp{
+   font-weight: bold;
+}
+
+.controls .btn#play i {color: #28a745}
+.controls .btn#stop i {color: #dc3545}
+
+.controls .btn:focus {
+   outline: 0;
+}
+
+.controls input {
+   margin: 0 20px;
+}
+
+@media (max-width: 800px){
+   .screen, .controls{
+      width: 90%;
+   }
+}
