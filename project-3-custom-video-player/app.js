@@ -25,9 +25,12 @@ function updatePlayIcon(){
 
 // update progress and time stamp
 function updateProgress(){
-   console.log(video.duration);
+   
 
    progress.value = (video.currentTime / video.duration) * 100;
+
+   console.log((video.currentTime / video.duration) * 100);
+
 
    // Get minutes
    let mins = Math.floor(video.currentTime / 60);
