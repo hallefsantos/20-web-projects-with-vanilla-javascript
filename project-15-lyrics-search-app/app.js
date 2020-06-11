@@ -64,10 +64,11 @@ async function getLyrics(artist, songTitle){
 
    const lyrics = data.lyrics.replace(/(\r\n|\r|\n)/g, '<br>');
 
-   result.innerHTML = `
-   <h2>${artist} - ${songTitle}</h2>
-   <span>${lyrics}</span>
-   `;  
+   console.log(data);
+   
+
+   result.innerHTML = `<h2>${artist} - ${songTitle}</h2>
+   <span>${lyrics}</span>`;  
 
    more.innerHTML = '';
 }

@@ -117,6 +117,7 @@ ul.songs li {
    margin: 30px auto;
    max-width: 100%;
    width: 800px;
+   padding: 0 15px;
 }
 
 .container p {
