@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+:root {
+   --border-color: #e3e5e4;
+   --background-color: #c3c7ca;
+   --text-color: #34444f;
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Balsamiq Sans', cursive;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+}
+
+.draggable-list,
+h1 {
+   margin: 20px 0;
+}
+
+.draggable-list {
+   list-style-type: none;
+   border: 1px solid var(--border-color);
+   color: var(--text-color);
+}
+
+.draggable-list li {
+   display: flex;
+   flex: 1;
+   background-color: #FFF;
+}
+
+.draggable-list li:not(:last-of-type){
+   border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number{
+   background-color: var(--background-color);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 28px;
+   height: 60px;
+   width: 60px;
+}
+
+.draggable-list .person-name {
+   margin: 0 20px 0 0px;
+}
+
+.draggable-list li.right .person-name {
+   color: #558B2F;
+}
+
+.draggable-list li.wrong .person-name {
+   color: red;
+}
+
+.draggable-list li.over .draggable {
+   background-color: #eaeaea;
+   border-top: 2px solid red;
+}
+
+.draggable {
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 15px;
+   flex: 1;
+}
+
+.check-btn {
+   background-color: var(--background-color);
+   border: 0;
+   color: var(--text-color);
+   font-size: 16px;
+   padding:10px 20px;
+   cursor: pointer;
+   margin-top: 20px;
+}
+
+.check-btn:active {
+   transform: scale(.98);
+}
