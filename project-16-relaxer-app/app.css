@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Montserrat', sans-serif;
+   display: flex;
+   align-items: center;
+   /* justify-content: center; */
+   flex-direction: column;
+   min-height: 100vh;
+   background: #224941 url('https://i.pinimg.com/originals/9e/cf/79/9ecf79cf308dfa67978bb5f35cd080f0.jpg') no-repeat center center/cover;
+   color: #FFF;
+}
+
+.container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto;
+   height: 300px;
+   width: 300px;
+   position: relative;
+   /* background-color: red; */
+   transform: scale(1);
+}
+
+.circle {
+   background-color: #010f1c;
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: -1;
+}
+
+#text {
+   font-size: 35px;
+}
+
+.gradient-circle {
+   background: conic-gradient(
+      #55b7a4 0%,
+      #4ca493 40%,
+      #fff 40%,
+      #fff 60%,
+      #336d62 60%,
+      #2a5b52 100%
+   );
+   /* position: absolute; */
+   height: 320px;
+   width: 320px;
+   border-radius: 50%;
+   z-index: -2;
+   position: absolute;
+   left: -10px;
+   top: -10px;
+}
+.pointer-container {
+   position: absolute;
+   top: -40px;
+   left: 140px;
+   width: 20px;
+   height: 190px;
+   background-color: red;
+   animation: rotate 7.5s linear forwards infinite;
+   transform-origin: bottom center;
+}
+
+@keyframes rotate {
+   from {
+      transform: rotate(0deg)
+   }
+
+   to {
+      transform: rotate(360deg)
+   }
+}
+
+.pointer {
+   background-color: #FFF;
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   display: block;
+}
+
+.container.grow {
+   animation: grow 3s linear forwards;
+}
+
+@keyframes grow {
+   from {
+      transform: scale(1)
+   }
+   to {
+      transform: scale(1.2);
+   }
+}
+
+.container.shrink {
+   animation: shrink 3s linear forwards;
+}
+
+@keyframes shrink {
+   from {
+      transform: scale(1.2)
+   }
+   to {
+      transform: scale(1);
+   }
+}
